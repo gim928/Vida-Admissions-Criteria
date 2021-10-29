@@ -1,0 +1,51 @@
+[
+  {
+    "mainText": "Contact Info",
+    "subText": "Name, Country, City",
+    "percent": 0
+  },
+  {
+    "mainText": "Education",
+    "subText": "Major, College Attended - Undergrad Degree Required",
+    "percent": 10
+  },
+  {
+    "mainText": "<span>Education Accomplishments</span>",
+    "subText": "Class Ranking, GPA - Min. GPA 3.7+ Strongly Preferred*",
+    "percent": 15
+  },
+  {
+    "mainText": "Employment",
+    "subText": "Company, Role/Title, Industry",
+    "percent": 10
+  },
+  {
+    "mainText": "<span>Employment Accomplishments</span>",
+    "subText": "Career Progression - Min. 2 Yrs Work Experience Required*",
+    "percent": 15
+  },
+  {
+    "mainText": "<span>Personal Story / Statement</span>",
+    "subText": "Tell Us About Yourself",
+    "percent": 15
+  },
+  {
+    "mainText": "<span>Personal Story / Accomplishments</span>",
+    "subText": "What Are You Most Proud Of?",
+    "percent": 15
+  },
+  {
+    "mainText": "<span>Personal Story / Aspirations</span>",
+    "subText": "What Do You Aim To Achieve?",
+    "percent": 15
+  },
+  {
+    "mainText": "Scholarship Need",
+    "percent": 0
+  },
+  {
+    "mainText": "Live Video Interview",
+    "subText": "<span>Final Round with One League</span>",
+    "percent": 5
+  }
+]
