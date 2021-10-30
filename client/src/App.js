@@ -3,9 +3,17 @@ import Criteria from "./components/Criteria";
 
 function App() {
   return (
-    <main>
-      <Criteria />
-    </main>
+    <>
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+      </head>
+      <main>
+        <Criteria />
+      </main>
+    </>
   );
 }
 
