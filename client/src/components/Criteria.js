@@ -28,42 +28,50 @@ const Criteria = () => {
       <div className="title">ADMISSIONS CRITERIA</div>
 
       <div className="row">
-        <table className="column">
-          {/* filter through first five criteria and put in table */}
-          {data &&
-            data.length > 0 &&
-            data
-              .filter((item, index) => index < 5)
-              .map((item) => (
-                <>
-                  <tr>
-                    <td>
-                      <div className="main-text">{item.mainText}</div>
-                      <div className="sub-text">{item.subText}</div>
-                    </td>
-                    <td className="percent">{item.percent}%</td>
-                  </tr>
-                </>
-              ))}
-        </table>
-        <table className="column">
-          {/* filter through last five criteria and put in table */}
-          {data &&
-            data.length > 0 &&
-            data
-              .filter((item, index) => index > 4)
-              .map((item) => (
-                <>
-                  <tr>
-                    <td>
-                      <div className="main-text">{item.mainText}</div>
-                      <div className="sub-text">{item.subText}</div>
-                    </td>
-                    <td className="percent">{item.percent}%</td>
-                  </tr>
-                </>
-              ))}
-        </table>
+        <div className="column">
+          <table>
+            <tbody>
+              {/* filter through first five criteria and put in table */}
+              {data &&
+                data.length > 0 &&
+                data
+                  .filter((item, index) => index < 5)
+                  .map((item) => (
+                    <>
+                      <tr>
+                        <td>
+                          <div className="main-text">{item.mainText}</div>
+                          <div className="sub-text">{item.subText}</div>
+                        </td>
+                        <td className="percent">{item.percent}%</td>
+                      </tr>
+                    </>
+                  ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="column">
+          <table>
+            <tbody>
+              {/* filter through last five criteria and put in table */}
+              {data &&
+                data.length > 0 &&
+                data
+                  .filter((item, index) => index > 4 && index < 9)
+                  .map((item) => (
+                    <>
+                      <tr>
+                        <td>
+                          <div className="main-text">{item.mainText}</div>
+                          <div className="sub-text">{item.subText}</div>
+                        </td>
+                        <td className="percent">{item.percent}%</td>
+                      </tr>
+                    </>
+                  ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <img
         src="https://fastly-cdn-shopvida.global.ssl.fastly.net/OneLeague/V2/pie-chart-edit.png?auto=webp"
@@ -79,15 +87,37 @@ const Criteria = () => {
         <p>100%</p>
       </div>
 
-      <div className="non-required">
-        {/* add non required criteria- hardcode in  */}
-        <tr>
-          <td className="test-scores">
-            NOT REQUIRED: STANDARDIZED TEST SCORES
-          </td>
-          <td>+5%</td>
-        </tr>
-      </div>
+      {/* <div className="non-required"> */}
+      {/* add non required criteria- hardcode in  */}
+      <table className="column non-required-position">
+        <tbody>
+          {/* filter through last five criteria and put in table */}
+          {data &&
+            data.length > 0 &&
+            data
+              .filter((item, index) => index > 9)
+              .map((item) => (
+                <>
+                  <tr>
+                    <td>
+                      <div className="main-text not-required-text">
+                        {item.mainText}
+                      </div>
+                      <div className="sub-text">{item.subText}</div>
+                    </td>
+                    <td className="percent">{item.percent}</td>
+                  </tr>
+                </>
+              ))}
+          <tr>
+            <td className="case-by-case-text">
+              *Applicants below these thresholds are considered on a case by
+              case basis.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {/* </div> */}
     </>
   );
 };

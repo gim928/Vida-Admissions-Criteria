@@ -48,5 +48,15 @@
     "mainText": "Live Video Interview",
     "subText": "Final Round with One League",
     "percent": 5
+  },
+  {
+    "mainText": "Not Required: Standardized Test Scores",
+    "subText": "SAT, ACT, GMAT, GRE, TOEFL, OTHER",
+    "percent": "+5%"
+  },
+  {
+    "mainText": "Personal Background",
+    "subText": "HH Income, Family Background, Access to Opportunity",
+    "percent": "+10%"
   }
 ]

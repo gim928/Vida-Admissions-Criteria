@@ -5,11 +5,18 @@
 .row {
   display: flex;
   padding-right: 17rem;
+  flex-wrap: wrap;
 }
 
 .column {
   flex: 50%;
   padding-right: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }
 
 .line-container {
@@ -46,7 +53,6 @@
 }
 
 .pie-chart {
-  /* float: right; */
   max-width: 17rem;
   max-height: 17rem;
   object-position: 3rem 0rem;
@@ -60,9 +66,47 @@
 .test-scores {
   color: white;
 }
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other on screens that are smaller than 600 px */
-@media screen and (min-width: 600px) {
+
+.non-required-position {
+  width: 40rem;
+  padding-top: 5rem;
+}
+
+.case-by-case-text {
+  color: white;
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    padding: 2rem;
+  }
   .column {
+    padding: 0;
     width: 100%;
+  }
+  .row {
+    padding: 0;
+  }
+
+  .pie-chart {
+    display: none;
+  }
+  .sub-text {
+    display: none;
+  }
+  .line-container {
+    padding: 0;
+  }
+
+  .hundred {
+    padding: 0;
+  }
+
+  .case-by-case-text {
+    visibility: hidden;
+  }
+
+  .not-required-text {
+    text-transform: capitalize;
   }
 }
