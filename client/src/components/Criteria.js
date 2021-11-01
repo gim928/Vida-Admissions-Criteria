@@ -65,7 +65,7 @@ const Criteria = () => {
               {data &&
                 data.length > 0 &&
                 data
-                  .filter((item, index) => index > 4 && index < 9)
+                  .filter((item, index) => index > 4 && index < 10)
                   .map((item) => (
                     <>
                       <tr>
@@ -105,31 +105,29 @@ const Criteria = () => {
       <div className="non-required-container">
         <table className="column ">
           <tbody>
-            {/* filter through last two criteria from json file (non-required) and put in table */}
-            {data &&
-              data.length > 0 &&
-              data
-                .filter((item, index) => index > 9)
-                .map((item) => (
-                  <>
-                    <tr>
-                      <td>
-                        <div
-                          className="main-text not-required-text"
-                          key="{item.mainText}"
-                        >
-                          {item.mainText}
-                        </div>
-                        <div className="sub-text" key="{item.subText}">
-                          {item.subText}
-                        </div>
-                      </td>
-                      <td className="percent" key="{item.percent}">
-                        {item.percent}
-                      </td>
-                    </tr>
-                  </>
-                ))}
+            <tr>
+              <td className="not-required-data">
+                <div className="main-text not-required-text test-score-text">
+                  Not Required: Standardized Test Scores
+                </div>
+                <div className="sub-text">
+                  SAT, ACT, GMAT, GRE, TOEFL, OTHER
+                </div>
+              </td>
+              <td className="percent">+5%</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div className="main-text not-required-text personal-background-text">
+                  Personal Background
+                </div>
+                <div className="sub-text">
+                  HH Income, Family Background, Access to Opportunity
+                </div>
+              </td>
+              <td className="percent">+10%</td>
+            </tr>
             <tr>
               <td className="case-by-case-text">
                 *Applicants below these thresholds are considered on a case by

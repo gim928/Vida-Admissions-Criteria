@@ -39,10 +39,7 @@ table {
   padding-right: 19rem;
   color: white;
 }
-/* add padding to top of non required criteria table */
-.non-required {
-  padding-top: 2rem;
-}
+
 /* text styling for page title  */
 .title {
   font-size: large;
@@ -109,10 +106,13 @@ table {
     padding: 0;
     width: 100%;
   }
+  .main-text {
+    width: 50%;
+    padding-bottom: 0.5rem;
+  }
   .row {
     padding: 0;
   }
-
   .pie-chart {
     display: none;
   }
@@ -131,10 +131,28 @@ table {
     visibility: hidden;
   }
 
-  .not-required-text {
-    text-transform: capitalize;
+  .test-score-text {
+    visibility: hidden;
+    position: relative;
   }
 
+  .test-score-text:after {
+    visibility: visible;
+    top: 0;
+    position: absolute;
+    left: 0;
+    content: "Optional: Standardized Test Scores";
+  }
+
+  .not-required-text {
+    font-style: italic;
+    text-transform: capitalize;
+    width: 60%;
+  }
+
+  .personal-background-text {
+    width: 50%;
+  }
   .non-required-container {
     width: 100%;
   }
