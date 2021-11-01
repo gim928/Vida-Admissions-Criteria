@@ -1,6 +1,15 @@
 * {
   box-sizing: border-box;
   background-color: black;
+  font-family: "Open Sans", sans-serif;
+}
+.title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.admissions-criteria-container {
+  padding-left: 2rem;
 }
 .row {
   display: flex;
@@ -45,6 +54,8 @@ table {
 .main-text {
   text-transform: uppercase;
   color: white;
+  font-weight: bold;
+  font-size: small;
 }
 
 .percent {
@@ -67,7 +78,7 @@ table {
   color: white;
 }
 
-.non-required-position {
+.non-required-container {
   width: 40rem;
   padding-top: 5rem;
 }
@@ -76,7 +87,13 @@ table {
   color: white;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
+  .title {
+    padding-top: 0;
+  }
+  .admissions-criteria-container {
+    padding: 0;
+  }
   main {
     padding: 2rem;
   }
@@ -108,5 +125,9 @@ table {
 
   .not-required-text {
     text-transform: capitalize;
+  }
+
+  .non-required-container {
+    width: 100%;
   }
 }

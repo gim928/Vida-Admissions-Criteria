@@ -24,9 +24,8 @@ const Criteria = () => {
   }, []);
 
   return (
-    <>
+    <div className="admissions-criteria-container">
       <div className="title">ADMISSIONS CRITERIA</div>
-
       <div className="row">
         <div className="column">
           <table>
@@ -87,38 +86,38 @@ const Criteria = () => {
         <p>100%</p>
       </div>
 
-      {/* <div className="non-required"> */}
-      {/* add non required criteria- hardcode in  */}
-      <table className="column non-required-position">
-        <tbody>
-          {/* filter through last five criteria and put in table */}
-          {data &&
-            data.length > 0 &&
-            data
-              .filter((item, index) => index > 9)
-              .map((item) => (
-                <>
-                  <tr>
-                    <td>
-                      <div className="main-text not-required-text">
-                        {item.mainText}
-                      </div>
-                      <div className="sub-text">{item.subText}</div>
-                    </td>
-                    <td className="percent">{item.percent}</td>
-                  </tr>
-                </>
-              ))}
-          <tr>
-            <td className="case-by-case-text">
-              *Applicants below these thresholds are considered on a case by
-              case basis.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      {/* </div> */}
-    </>
+      {/* non required criteria- */}
+      <div className="non-required-container">
+        <table className="column ">
+          <tbody>
+            {/* filter through last two criteria and put in table */}
+            {data &&
+              data.length > 0 &&
+              data
+                .filter((item, index) => index > 9)
+                .map((item) => (
+                  <>
+                    <tr>
+                      <td>
+                        <div className="main-text not-required-text">
+                          {item.mainText}
+                        </div>
+                        <div className="sub-text">{item.subText}</div>
+                      </td>
+                      <td className="percent">{item.percent}</td>
+                    </tr>
+                  </>
+                ))}
+            <tr>
+              <td className="case-by-case-text">
+                *Applicants below these thresholds are considered on a case by
+                case basis.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 
