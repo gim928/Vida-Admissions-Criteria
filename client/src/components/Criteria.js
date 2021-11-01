@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Criteria.css";
 
 const Criteria = () => {
+  //defining initial state and variables
   const [data, setData] = useState([]);
+  //define const getData in local memory that will fetch data from json file in public folder
   const getData = () => {
     fetch("data.json", {
       headers: {
@@ -11,7 +13,7 @@ const Criteria = () => {
       },
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         return response.json();
       })
       .then(function (criteria) {
@@ -19,6 +21,7 @@ const Criteria = () => {
       });
   };
 
+  //hook calls getData function
   useEffect(() => {
     getData();
   }, []);
@@ -30,7 +33,7 @@ const Criteria = () => {
         <div className="column">
           <table>
             <tbody>
-              {/* filter through first five criteria and put in table */}
+              {/* filter through first five criteria from json file and put in table */}
               {data &&
                 data.length > 0 &&
                 data
@@ -39,10 +42,16 @@ const Criteria = () => {
                     <>
                       <tr>
                         <td>
-                          <div className="main-text">{item.mainText}</div>
-                          <div className="sub-text">{item.subText}</div>
+                          <div className="main-text" key="{item.mainText}">
+                            {item.mainText}
+                          </div>
+                          <div className="sub-text" key="{item.subText}">
+                            {item.subText}
+                          </div>
                         </td>
-                        <td className="percent">{item.percent}%</td>
+                        <td className="percent" key="{item.percent}">
+                          {item.percent}%
+                        </td>
                       </tr>
                     </>
                   ))}
@@ -52,7 +61,7 @@ const Criteria = () => {
         <div className="column">
           <table>
             <tbody>
-              {/* filter through last five criteria and put in table */}
+              {/* filter through last five required criteria in json file and put in table */}
               {data &&
                 data.length > 0 &&
                 data
@@ -61,10 +70,16 @@ const Criteria = () => {
                     <>
                       <tr>
                         <td>
-                          <div className="main-text">{item.mainText}</div>
-                          <div className="sub-text">{item.subText}</div>
+                          <div className="main-text" key="{item.mainText}">
+                            {item.mainText}
+                          </div>
+                          <div className="sub-text" key="{item.subText}">
+                            {item.subText}
+                          </div>
                         </td>
-                        <td className="percent">{item.percent}%</td>
+                        <td className="percent" key="{item.percent}">
+                          {item.percent}%
+                        </td>
                       </tr>
                     </>
                   ))}
@@ -86,11 +101,11 @@ const Criteria = () => {
         <p>100%</p>
       </div>
 
-      {/* non required criteria- */}
+      {/* non required criteria-listed below required criteria table */}
       <div className="non-required-container">
         <table className="column ">
           <tbody>
-            {/* filter through last two criteria and put in table */}
+            {/* filter through last two criteria from json file (non-required) and put in table */}
             {data &&
               data.length > 0 &&
               data
@@ -99,12 +114,19 @@ const Criteria = () => {
                   <>
                     <tr>
                       <td>
-                        <div className="main-text not-required-text">
+                        <div
+                          className="main-text not-required-text"
+                          key="{item.mainText}"
+                        >
                           {item.mainText}
                         </div>
-                        <div className="sub-text">{item.subText}</div>
+                        <div className="sub-text" key="{item.subText}">
+                          {item.subText}
+                        </div>
                       </td>
-                      <td className="percent">{item.percent}</td>
+                      <td className="percent" key="{item.percent}">
+                        {item.percent}
+                      </td>
                     </tr>
                   </>
                 ))}

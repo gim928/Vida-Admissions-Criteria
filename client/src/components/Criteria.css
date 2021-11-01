@@ -1,56 +1,62 @@
 * {
   box-sizing: border-box;
   background-color: black;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+/* adds padding to the top and bottom of the admissions criteria page title */
 .title {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-
+/* adds padding to div that contains admissions criteria tables */
 .admissions-criteria-container {
   padding-left: 2rem;
 }
+/* flexbox container properties for admissions criteria tables */
 .row {
   display: flex;
   padding-right: 17rem;
   flex-wrap: wrap;
 }
-
+/* places two tables containing required admissions criteria next to each other and adds padding to the right */
 .column {
   flex: 50%;
   padding-right: 2rem;
 }
-
+/* required admissions criteria table styling-allows content to take up full width of container and establishes border properties */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
 }
-
+/* adds padding to the right of the line below tables*/
 .line-container {
   padding-right: 19rem;
 }
-
+/* positioning for the 100 percent below the table */
 .hundred {
   float: right;
   padding-right: 19rem;
   color: white;
 }
-
+/* add padding to top of non required criteria table */
 .non-required {
   padding-top: 2rem;
 }
-
+/* text styling for page title  */
 .title {
-  font-size: x-large;
+  font-size: large;
   color: white;
+  font-weight: bold;
 }
+/* text styling for subtext */
 .sub-text {
   font-size: x-small;
   color: gray;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
 }
-
+/* text styling for main text in tables */
 .main-text {
   text-transform: uppercase;
   color: white;
@@ -62,7 +68,7 @@ table {
   text-align: right;
   color: white;
 }
-
+/* image styling- positions it on the right of the page, partially off the page, and sets opacity and z index  */
 .pie-chart {
   max-width: 17rem;
   max-height: 17rem;
@@ -85,8 +91,10 @@ table {
 
 .case-by-case-text {
   color: white;
+  font-size: x-small;
 }
 
+/* for tablets and smaller, the content stacks into one column and subtext and image do not appear */
 @media screen and (max-width: 900px) {
   .title {
     padding-top: 0;
