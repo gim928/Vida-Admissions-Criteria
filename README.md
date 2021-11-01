@@ -18,7 +18,9 @@ This is a one page react app that displays just one component of an organization
 4. [Contributing](#contributing)
 5. [Questions](#questions)
 
-## Screenshot: ![Screenshot](./Screenshot.png)
+## Screenshots: ![Screenshot](./Screenshot.png)
+
+![Screenshot](./mobile-screenshot.png)
 
 ## Installation
 
